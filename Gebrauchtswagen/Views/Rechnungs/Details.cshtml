@@ -1,0 +1,48 @@
+﻿@model Gebrauchtswagen.Models.Rechnung
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Rechnung</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Rechnungsnummer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Rechnungsnummer)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Datum)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Datum)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Kunde)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Kunde.Hn)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Rechnungfahrzeug)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Rechnungfahrzeug.RechnungfahrzeugId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Verkaeufer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Verkaeufer.Nachname)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.RechnungId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
